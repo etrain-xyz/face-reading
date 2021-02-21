@@ -1,0 +1,5 @@
+flask
+uuid
+dlib
+torch
+torchvision

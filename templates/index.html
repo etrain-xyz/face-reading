@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="/static/css/style.css?v=1.0">
+	<script src="/static/js/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+	<script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<title>Nhân tướng học</title>
+</head>
+
+<body>
+	<main role="main">
+
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Nhân tướng học</h1>
+				<p class="lead text-muted">Tìm hiểu tính cách con người qua khuôn mặt.</p>
+				<img class="mt-4" id="face-input-preview" alt="Face"
+								style="max-width: 225px; max-height: 225px; margin: auto; display: block;"
+								src="/static/images/face.jpg" data-holder-rendered="true">
+				<input id="face-input" type="file" accept="image/*" capture class="d-none image-input">
+			</div>
+		</section>
+	</main>
+
+
+	<div id="result-dialog" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Nhân tướng học</h5>
+				</div>
+				<div class="modal-body">
+					<div class="row mb-3">
+						<div class="col-md-4">
+							<img id="face_cropped" src="">
+						</div>
+						<div class="col-md-8">
+							<h4 id="face_rating"></h4>
+						</div>
+					</div>
+					
+					<div class="bg-rgba-white box-shadow">
+						<table class="table table-sm table-dark">
+							<tbody id="tbody-result">
+							  
+							</tbody>
+						  </table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" id="close-result" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="loading-modal" class="d-none">
+		<div id="table-container">
+			<div id="table-cell">
+				<div class="loadingio-spinner-ellipsis-ye45983ojx">
+					<div class="ldio-rumugdkklr9">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/static/js/main.js?v=1.3" type="text/javascript"></script>
+</body>
+
+</html>
