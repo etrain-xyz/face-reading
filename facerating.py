@@ -13,7 +13,7 @@ import torch.nn as nn
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('./data/shape_predictor_5_face_landmarks.dat')
 
-model_arch = 'resnext50_32x4d'
+model_arch = 'resnet18'
 
 if torch.cuda.is_available():
 	device = 'cuda:0'
@@ -127,7 +127,7 @@ def face_alignment(rect, gray, image):
 
 
 
-def predict(img_path, model_path="./models/resnext50_32x4d_best_state_1.pt"):
+def predict(img_path, model_path="./models/resnet18_best_state.pt"):
 	img_name = os.path.basename(img_path)
 	img_dir_name = os.path.dirname(img_path)
 
